@@ -11,7 +11,7 @@ $result = $conn-> query($sql);
 
 if ($result ->num_rows >0){
 	while($row = $result->fetch_assoc()){
-	echo "codi: ". $row["codi"]. " ".$row["nom"]." ".$row["descripcio"]." " .$row["preu"]."<img width='300px' height'300px' src='../.imatges/" .$row["codi"]. ".jpg'> <br>";
+	echo "codi: ". $row["codi"]. " ".$row["nom"]." ".$row["descripcio"]." " .$row["preu"]."<a href='fitxa.php?codi=".$row["codi"]."'><img width='300px' height'300px' src='../.imatges/" .$row["codi"]. ".jpg'></a> <br>";
 	}
 }else{
 echo "0 results";

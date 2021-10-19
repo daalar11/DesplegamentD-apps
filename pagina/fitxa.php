@@ -11,7 +11,7 @@
 <a href="archiu.php">Torna a inici </a>>>>
 
 <?php
-$codi=1;
+$codi=$_GET['codi'];
 include('config-db.php');
 $conn =new mysqli($servername, $username, $password, $dbname);
 
