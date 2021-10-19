@@ -12,10 +12,7 @@
 
 <?php
 $codi=1;
-$servername ="localhost";
-$username ="admin";
-$password="admin";
-$dbname="myDB";
+include('config-db.php');
 $conn =new mysqli($servername, $username, $password, $dbname);
 
 if($conn->connect_error){

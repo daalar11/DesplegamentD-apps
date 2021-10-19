@@ -11,11 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $descripcio= $_POST["desc"];
     $preu = $_POST["preu"];
   }
-$servername ="localhost";
-$username ="admin";
-$password="admin";
-$dbname="myDB";
-
+include('config-db.php');
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
