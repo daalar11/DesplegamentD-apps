@@ -4,7 +4,7 @@ $conn =new mysqli($servername, $username, $password, $dbname);
 if($conn->connect_error){
 	die("Connection failed: ". $conn->connect_error);
 }
-
+echo "<a href='carreto.php'>Torna a inici </a>";
 $sql ="Select codi,nom,descripcio, preu FROM productes";
 $result = $conn-> query($sql);
 
