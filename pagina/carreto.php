@@ -17,7 +17,7 @@ include('config-db.php');
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 $quantitat=10;
-$preu total=0;
+$preutotal=0;
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
