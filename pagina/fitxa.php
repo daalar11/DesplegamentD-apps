@@ -33,8 +33,6 @@ echo "0 results";
 }
 $conn->close();
 ?>
-<form method="POST" action="carreto.php">
-	<input type="submit"/>
-</form>
+
 </body>
 </html>
