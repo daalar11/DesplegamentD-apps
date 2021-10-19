@@ -13,6 +13,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 $sql ="INSERT INTO productes(codi,nom,descripcio,preu) values($codi,'$nom','$descripcio',$preu);";
+$result = $conn-> query($sql);
   header ("refresh:2;url=form.html");
 $conn->close();
 ?>
