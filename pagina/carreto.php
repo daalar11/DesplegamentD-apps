@@ -36,7 +36,7 @@ if ($result ->num_rows >0){
 }else{
 echo "0 results";
 }
-	echo "<img width='300px'height='300px' src='../.imatges/".$codi.".jpg'> ".$products[0][0]. " ".$preutotal;
+	echo "<img width='300px'height='300px' src='../.imatges/".$codi.".jpg'> ".$products[0][0]. " ".$preutotal." euros";
 
 $conn->close();
 ?>
