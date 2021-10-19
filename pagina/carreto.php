@@ -11,13 +11,35 @@
 <a href="archiu.php">Torna a inici </a>>>>
 
 <?php
+$codi=1;
 include('config-db.php');
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
+$quantitat=10;
+$preu total=0;
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
+	$sql ="Select codi,nom,descripcio, preu FROM productes";
+$result = $conn-> query($sql);
+
+if ($result ->num_rows >0){
+	while($row = $result->fetch_assoc()){
+        if($row["codi"]==$codi){
+	$products = array(
+		array($row["nom"],$row["preu"],$quantitat)
+	);
+        }
+	}
+	$preutotal=$products[0][1]*$products[0][2];
+}else{
+echo "0 results";
+}
+	echo "<img width='300px'height='300px' src='../.imatges/".$codi.".jpg'>".$products[0][0]. $preutotal;
+
+$conn->close();
 ?>
+	
 	</body>
 </html>
