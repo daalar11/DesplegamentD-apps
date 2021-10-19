@@ -22,15 +22,13 @@ if($conn->connect_error){
 $sql ="Select codi,nom,descripcio, preu FROM productes where codi=";
 $result = $conn-> query($sql);
 
-if ($result ->num_rows >0){
+
 	while($row = $result->fetch_assoc()){
         if($row["codi"]==$codi){
 	echo "<img width='300px'height='300px' src='../.imatges/  " .$row["codi"]. ".jpg'> codi: ". $row["codi"]. " ".$row["nom"]." ".$row["descripcio"]." " .$row["preu"]." <br>";
         }
 	}
-}else{
-echo "0 results";
-}
+
 $conn->close();
 ?>
 <form method="POST" action="carreto.php">
