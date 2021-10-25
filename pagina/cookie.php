@@ -23,6 +23,7 @@
         setcookie("count", $cookie);
         ?> 
     <p>Has visitat la pagina</p> <?= $_COOKIE['count'] ?> <p>vegades. </p>
+<?php  }  ?>
 
 </body>
 </html>
