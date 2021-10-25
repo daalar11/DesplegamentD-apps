@@ -12,7 +12,7 @@
     if (!isset($_COOKIE['count']))
     {
         ?> 
-Welcome! This is the first time you have viewed this page. 
+        <h1>Hola aixo ha estat la primera vegada que has vist la pagina </h1>
 <?php 
         $cookie = 1;
         setcookie("count", $cookie);
@@ -22,8 +22,7 @@ Welcome! This is the first time you have viewed this page.
         $cookie = ++$_COOKIE['count'];
         setcookie("count", $cookie);
         ?> 
-You have viewed this page <?= $_COOKIE['count'] ?> times. 
-<?php  }// end else  ?>
+    <p>Has visitat la pagina</p> <?= $_COOKIE['count'] ?> <p>vegades. </p>
 
 </body>
 </html>
