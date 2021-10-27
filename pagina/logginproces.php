@@ -5,7 +5,7 @@ $usuariUs=$_POST['usuari'];
 $contraseñaUs=$_POST['contraseña'];
 
 
-if(strnatcmp($usuari,$usuariUs)&&strnatcmp($contraseñaUs,$contraseña)){
+if(strnatcmp($usuari,$usuariUs)==true && strnatcmp($contraseñaUs,$contraseña)== true){
     header ("refresh:2;url=form.html");
 }else{
     header ("refresh:2;url=loggin.php");
