@@ -10,7 +10,7 @@
 <?php
 include('header.php');
 ?>
-    <form action="insert.php" method="post">  
+    <form action="logginproces.php" method="post">  
         Usuari:       <input type="text" name="usuari">
         Contraseña:   <input type="text" name="contraseña">
         <input type="submit" value="Insert"/>
