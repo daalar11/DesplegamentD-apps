@@ -5,7 +5,7 @@ $usuariUs=$_POST['usuari'];
 $contraseñaUs=$_POST['contraseña'];
 
 
-if($usuari==$usuariUs&&$contraseñaUs==$contraseña){
+if(strcmp($usuari==$usuariUs)===0&&strcmp($contraseñaUs==$contraseña)===0){
     header ("refresh:2;url=form.html");
 }else{
     header ("refresh:2;url=loggin.php");
