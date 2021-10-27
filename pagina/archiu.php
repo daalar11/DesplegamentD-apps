@@ -5,7 +5,6 @@ if($conn->connect_error){
 	die("Connection failed: ". $conn->connect_error);
 }
 include('header.php');
-echo "<a href='carreto.php'>Torna a inici </a>";
 $sql ="Select codi,nom,descripcio, preu FROM productes";
 $result = $conn-> query($sql);
 

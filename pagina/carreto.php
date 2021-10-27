@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<a href="archiu.php">Torna a inici </a>>>>
+<?php include('header.php'); ?>
 
 <?php
 $codi=1;
