@@ -39,7 +39,7 @@ setcookie("lang", $language);
 	if ($result ->num_rows >0){
 	$row = $result->fetch_assoc();
 		
-		echo "<h1 lang="es">codi:</h1>  <h1 lang="cat">codi:</h1>". $row["codi"]. " <h1>Nom: </h1> ".$row["nom"]." <h4>Descrpicio:</h4>".$row["descripcio"]." <h4>preu</h4>" .$row["preu"]."<br> <img width='300px'height='300px' src='../.imatges/" .$row["codi"]. ".jpg'><br>";	
+		echo "<h1 lang='es'>codi:</h1>  <h1 lang='cat'>codi:</h1>". $row["codi"]. " <h1>Nom: </h1> ".$row["nom"]." <h4>Descrpicio:</h4>".$row["descripcio"]." <h4>preu</h4>" .$row["preu"]."<br> <img width='300px'height='300px' src='../.imatges/" .$row["codi"]. ".jpg'><br>";	
 	}else{
 		echo "0 results";
 	}
