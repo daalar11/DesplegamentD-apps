@@ -61,7 +61,7 @@ if (document.cookie.indexOf("lang=") >= 0) {
 	$(langStr).show();
 } else {
 	// No cookie - show default language
-	$("[lang='de']").show();
+	$("[lang='cat']").show();
 }
 
 $('#lang-switch').change(function () {
