@@ -9,7 +9,7 @@ if(isset($usuariUs)&&isset($contrasenaUs)){
     if($usuariUs==$usuari&&$contrasena==$contrasenaUs){
          header ("refresh:2;url=form.html");
     }else{
-         header ("refresh:2;url=form.html");
+         header ("refresh:2;url=loggin.php");
     }
     //header ("refresh:2;url=form.html");
 }else{
