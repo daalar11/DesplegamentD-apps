@@ -9,4 +9,3 @@ else
 echo"views = ".$_SESSION['views'];
   
 ?>
-?>
