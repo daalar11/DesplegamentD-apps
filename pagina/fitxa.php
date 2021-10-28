@@ -13,7 +13,7 @@
 	
 <form>
     <label for="lang-switch">
-        <span lang="cat">Iidioma</span>
+        <span lang="cat">Iidioma:</span>
         <span lang="es">Idioma</span>
     </label>
     <select id="lang-switch">
