@@ -1,11 +1,11 @@
 <?php
 $usuari='adminsitrador';
-$contraseña='1234';
+$contrasena='1234';
 $usuariUs=$_POST['usuari'];
-$contraseñaUs=$_POST['contraseña'];
+$contrasenaUs=$_POST['contrasena'];
 
 
-if(strcmp($usuari,$usuariUs)===0&&strcmp($contraseñaUs,$contraseña)===0){
+if(strcmp($usuari,$usuariUs)===0&&strcmp($contrasenaUs,$contrasena)===0){
     header ("refresh:2;url=form.html");
 }else{
     header ("refresh:2;url=loggin.php");

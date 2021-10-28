@@ -12,7 +12,7 @@ include('header.php');
 ?>
     <form action="logginproces.php" method="post">  
         Usuari:       <input type="text" name="usuari">
-        Contraseña:   <input type="text" name="contraseña">
+        Contraseña:   <input type="text" name="contrasena">
         <input type="submit" value="Insert"/>
     </form>
 
