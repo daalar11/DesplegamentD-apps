@@ -5,7 +5,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<script src="scriptlang.js">
 		
 	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -46,6 +45,25 @@ setcookie("lang", $language);
 	}
 	$conn->close();
 ?>
-
+<script>
+	$('[lang]').hide();
+$('[lang="cat"]').show();
+$('#lang-switch').change(function () {
+    var lang = $(this).val();
+    switch (lang) {
+        case 'es':
+            $('[lang]').hide();
+            $('[lang="es"]').show();
+        break;
+        case 'cat':
+            $('[lang]').hide();
+            $('[lang="cat"]').show();
+        break;
+        default:
+            $('[lang]').hide();
+            $('[lang="cat"]').show();
+        }
+});
+</script>
 </body>
 </html>
