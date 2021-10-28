@@ -19,7 +19,7 @@ if($conn->connect_error){
 	die("Connection failed: ". $conn->connect_error);
 }
 	
-$sql ="Select codi,nom,descripcio, preu FROM productes";
+$sql ="Select codi,nom,descripcio, preu FROM productes where codi=$codi";
 $result = $conn-> query($sql);
 
 if ($result ->num_rows >0){
