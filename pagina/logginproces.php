@@ -1,6 +1,4 @@
 <?php
-$usuari='adminsitrador';
-$contrasena='1234';
 $usuariUs=$_POST['usuari'];
 $contrasenaUs=$_POST['contrasena'];
 echo "$usuariUs . $contrasenaUs";
