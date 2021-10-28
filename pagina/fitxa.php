@@ -5,9 +5,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<script>
+		
+	</script>
 </head>
 <body>
 <?php
+$language ="";
+setcookie("lang", $language);
 	include('header.php');
 	$codi=$_GET['codi'];
 	include('config-db.php');
