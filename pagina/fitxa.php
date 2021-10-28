@@ -22,8 +22,6 @@
     </select>
 </form>
 <?php
-$language ="";
-setcookie("lang", $language);
 	include('header.php');
 	$codi=$_GET['codi'];
 	include('config-db.php');
