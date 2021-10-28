@@ -1,5 +1,5 @@
 <?php
-ession_start();
+session_start();
    
 if(isset($_SESSION['views']))
     $_SESSION['views'] = $_SESSION['views']+1;
