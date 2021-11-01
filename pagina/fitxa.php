@@ -15,17 +15,17 @@
 	$('#lang-switch').change(function () {
     var lang = $(this).val();
     switch (lang) {
-        case 'en':
+        case 'cat':
             $('[lang]').hide();
             $('[lang="cat"]').show();
         break;
-        case 'de':
+        case 'es':
             $('[lang]').hide();
-            $('[lang="cast"]').show();
+            $('[lang="es"]').show();
         break;
         default:
             $('[lang]').hide();
-            $('[lang="cast"]').show();
+            $('[lang="es"]').show();
         }
 	});
 	</script>
@@ -40,7 +40,6 @@
     </select>
 </form>
 <?php
-	include('header.php');
 	$codi=$_GET['codi'];
 	include('config-db.php');
 	$conn =new mysqli($servername, $username, $password, $dbname);
