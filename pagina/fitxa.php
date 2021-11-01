@@ -56,7 +56,8 @@
 		
 		echo "<p>
 				<span lang='es'>codigo:</span>
-				<span lang='cat'>codi:</span>  ". $row["codi"]. " 
+				<span lang='cat'>codi:</span>
+				</p>  ". $row["codi"]. " 
 				<span lang='cat'>Nom: </span> 
 				<span lang='es'>Nombre: </span>".$row["nom"]." 
 				<span lang='cat'>Descrpicio:</span>
