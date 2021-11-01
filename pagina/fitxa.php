@@ -74,7 +74,7 @@ $('#lang-switch').change(function () {
 				<span lang=\"es\">codigo:</span>
 				<span lang=\"ca\">codi:</span>
 				</p>  ". $row["codi"]. " 
-				<span lang='ca'>Nom: </span> 
+				<p><span lang='ca'>Nom: </span> 
 				<span lang='es'>Nombre: </span>".$row["nom"]." 
 				<span lang='ca'>Descrpicio:</span>
 				<span lang='es'>Descrpicion:</span>".$row["descripcio"]." 
