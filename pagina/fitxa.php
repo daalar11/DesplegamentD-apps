@@ -10,24 +10,40 @@
 </head>
 <body>
 <script>
-	$('[lang]').hide();
-	$('[lang="cat"]').show();
-	$('#lang-switch').change(function () {
-    var lang = $(this).val();
-    switch (lang) {
-        case 'cat':
-            $('[lang]').hide();
-            $('[lang="cat"]').show();
-        break;
-        case 'es':
-            $('[lang]').hide();
-            $('[lang="es"]').show();
-        break;
-        default:
-            $('[lang]').hide();
-            $('[lang="cat"]').show();
-        }
-	});
+	var langStr;
+
+$('span[lang]').hide();
+if (document.cookie.indexOf("lang=") >= 0) {
+	langStr = document.cookie.indexOf("lang=");
+	langStr = document.cookie.substring(langStr + 5, langStr + 7);
+	$('#lang-switch option')
+		.removeAttr('selected')
+		.filter('[value=' + langStr + ']')
+		.attr('selected', true);
+	langStr = '[lang="' + langStr + '"]';
+	console.log(langStr);
+	$(langStr).show();
+} else {
+	// No cookie - show default language
+	$("[lang='cat']").show();
+}
+
+$('#lang-switch').change(function () {
+	var CookieDate = new Date, tmp;
+	CookieDate.setFullYear(CookieDate.getFullYear() +10);
+	var lang = $(this).val();
+	switch (lang) {
+		case 'es':
+			$('span[lang]').hide();
+			$('span[lang="es"]').show();
+			document.cookie = "lang=es; expires=" + CookieDate.toUTCString() + "; path=/";
+			break;
+		default:
+			$('span[lang]').hide();
+			$('span[lang="cat"]').show();
+			document.cookie = "lang=cat; expires=" + CookieDate.toUTCString() + ";path=/";
+	}
+});
 	</script>
 <form>
     <label for="lang-switch">
