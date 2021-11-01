@@ -25,7 +25,7 @@
         break;
         default:
             $('[lang]').hide();
-            $('[lang="es"]').show();
+            $('[lang="cat"]').show();
         }
 	});
 	</script>
