@@ -5,8 +5,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-		
-	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
@@ -37,46 +35,40 @@
 	if ($result ->num_rows >0){
 	$row = $result->fetch_assoc();
 		
-		echo "<p><h1 lang='es'>codi:</h1>  <h1 lang='cat'>codi:</h1></p>". $row["codi"]. " <h1>Nom: </h1> ".$row["nom"]." <h4>Descrpicio:</h4>".$row["descripcio"]." <h4>preu</h4>" .$row["preu"]."<br> <img width='300px'height='300px' src='../.imatges/" .$row["codi"]. ".jpg'><br>";	
+		echo "<p>
+				<span lang='es'>codigo:</span>
+				<span lang='cat'>codi:</span>  ". $row["codi"]. " 
+				<span lang='cat'>Nom: </span> 
+				<span lang='es'>Nombre: </span>".$row["nom"]." 
+				<span lang='cat'>Descrpicio:</span>
+				<span lang='es'>Descrpicion:</span>".$row["descripcio"]." 
+				<span lang='cat'>preu </span>
+				<span lang='es'>precio </span>" .$row["preu"]."<br> 
+				<img width='300px'height='300px' src='../.imatges/" .$row["codi"]. ".jpg'>
+			</p>";	
 	}else{
 		echo "0 results";
 	}
 	$conn->close();
 ?>
 <script>
-var langStr;
-
-$('span[lang]').hide();
-if (document.cookie.indexOf("lang=") >= 0) {
-	langStr = document.cookie.indexOf("lang=");
-	langStr = document.cookie.substring(langStr + 5, langStr + 7);
-	$('#lang-switch option')
-		.removeAttr('selected')
-		.filter('[value=' + langStr + ']')
-		.attr('selected', true);
-	langStr = '[lang="' + langStr + '"]';
-	console.log(langStr);
-	$(langStr).show();
-} else {
-	// No cookie - show default language
-	$("[lang='cat']").show();
-}
-
-$('#lang-switch').change(function () {
-	var CookieDate = new Date, tmp;
-	CookieDate.setFullYear(CookieDate.getFullYear() +10);
-	var lang = $(this).val();
-	switch (lang) {
-		case 'en':
-			$('span[lang]').hide();
-			$('span[lang="es"]').show();
-			document.cookie = "lang=es; expires=" + CookieDate.toUTCString() + "; path=/";
-			break;
-		default:
-			$('span[lang]').hide();
-			$('span[lang="cat"]').show();
-			document.cookie = "lang=cat; expires=" + CookieDate.toUTCString() + ";path=/";
-	}
+	$('[lang]').hide();
+	$('[lang="cat"]').show();
+	$('#lang-switch').change(function () {
+    var lang = $(this).val();
+    switch (lang) {
+        case 'en':
+            $('[lang]').hide();
+            $('[lang="cat"]').show();
+        break;
+        case 'de':
+            $('[lang]').hide();
+            $('[lang="cast"]').show();
+        break;
+        default:
+            $('[lang]').hide();
+            $('[lang="cast"]').show();
+        }
 });
 </script>
 </body>
