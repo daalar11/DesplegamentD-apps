@@ -40,19 +40,19 @@ $('#lang-switch').change(function () {
 			break;
 		default:
 			$('span[lang]').hide();
-			$('span[lang="cat"]').show();
-			document.cookie = "lang=cat; expires=" + CookieDate.toUTCString() + ";path=/";
+			$('span[lang="ca"]').show();
+			document.cookie = "lang=ca; expires=" + CookieDate.toUTCString() + ";path=/";
 	}
-});
+	});
 	</script>
 <form>
     <label for="lang-switch">
-        <span lang="cat">Iidioma:</span>
+        <span lang="ca">Iidioma:</span>
         <span lang="es">Idioma</span>
     </label>
     <select id="lang-switch">
         <option value="es">Castellano</option>
-        <option value="cat" selected>Catalan</option>
+        <option value="ca" selected>Catalan</option>
     </select>
 </form>
 <?php
@@ -72,13 +72,13 @@ $('#lang-switch').change(function () {
 		
 		echo "<p>
 				<span lang=\"es\">codigo:</span>
-				<span lang=\"cat\">codi:</span>
+				<span lang=\"ca\">codi:</span>
 				</p>  ". $row["codi"]. " 
-				<span lang='cat'>Nom: </span> 
+				<span lang='ca'>Nom: </span> 
 				<span lang='es'>Nombre: </span>".$row["nom"]." 
-				<span lang='cat'>Descrpicio:</span>
+				<span lang='ca'>Descrpicio:</span>
 				<span lang='es'>Descrpicion:</span>".$row["descripcio"]." 
-				<span lang='cat'>preu </span>
+				<span lang='ca'>preu </span>
 				<span lang='es'>precio </span>" .$row["preu"]."<br> 
 				<img width='300px'height='300px' src='../.imatges/" .$row["codi"]. ".jpg'>
 			</p>";	
