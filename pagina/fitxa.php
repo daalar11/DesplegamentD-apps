@@ -6,6 +6,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+	$('[lang]').hide();
+	$('[lang="cat"]').show();
+	$('#lang-switch').change(function () {
+    var lang = $(this).val();
+    switch (lang) {
+        case 'en':
+            $('[lang]').hide();
+            $('[lang="cat"]').show();
+        break;
+        case 'de':
+            $('[lang]').hide();
+            $('[lang="cast"]').show();
+        break;
+        default:
+            $('[lang]').hide();
+            $('[lang="cast"]').show();
+        }
+	});
+	</script>
 </head>
 <body>
 	
@@ -51,25 +71,6 @@
 	}
 	$conn->close();
 ?>
-<script>
-	$('[lang]').hide();
-	$('[lang="cat"]').show();
-	$('#lang-switch').change(function () {
-    var lang = $(this).val();
-    switch (lang) {
-        case 'en':
-            $('[lang]').hide();
-            $('[lang="cat"]').show();
-        break;
-        case 'de':
-            $('[lang]').hide();
-            $('[lang="cast"]').show();
-        break;
-        default:
-            $('[lang]').hide();
-            $('[lang="cast"]').show();
-        }
-});
-</script>
+
 </body>
 </html>
