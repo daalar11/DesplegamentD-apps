@@ -15,15 +15,15 @@
 	// una cookie con el idioma 
 	if(isset($_GET['idioma'])){ 
 	  setcookie ("idioma", $_GET['idioma'], time () + 7*24*60*60); 
-	  $idiomaActual = $_GET['idioma']; 
+	  $lang = $_GET['idioma']; 
 	} 
 	elseif(isset($_COOKIE['idioma'])){ 
 	// Miri que exista el archivo del idioma 
 	  if(file_exists("lang/".$_COOKIE['idioma'].".php")){ 
-		$idiomaActual = $_COOKIE['idioma']; 
+		$lang = $_COOKIE['idioma']; 
 	  } 
 	} //incluye la carpeta (lang) donde estan los file php en y es etc.
-	include($_SERVER['DOCUMENT_ROOT']."/lang/".$idiomaActual.".php"); 
+	include("lang/".$lang".php"); 
 
 	
 	$codi=$_GET['codi'];
@@ -36,11 +36,7 @@
 	?>
 	<?php
 echo $selcion_idioma['selecciona'];?>  
-<select onChange="lang/ = '<?php echo $_SERVER['PHP_SELF'];?>?idioma=' + this.value" > 
-<option><?php echo $selcion_idioma['idiomas'];?>  
-<option value="es" > <?php echo $selcion_idioma['cast'];?></option>  
-<option value="cat" > <?php echo $selcion_idioma['cat'];?> </option>
-</select><?php echo actual;?> 
+
 	<?php
 	$sql ="Select codi,nom,descripcio, preu FROM productes where codi=$codi";
 	$result = $conn-> query($sql);
@@ -63,6 +59,21 @@ echo $selcion_idioma['selecciona'];?>
 	}else{
 		echo "0 results";
 	}
+	?>
+	<p>
+		<?= $lang["codigo"].$row["codi"] ?><br>
+	</p>
+	<p>
+		<?= $lang["nombre"].$row["nom"] ?><br>
+	</p>
+	<p>
+		<?= $lang["descripcion"].$row["descripcio"] ?><br>
+	</p>
+	<p>
+		<?= $lang["precio"].$row["preu"] ?><br>
+	</p>
+	<?= "<a href='carreto.php?preu=".$row["preu"]."&codi=".$row["codi"]."'><img width='300px'height='300px' src='../.imatges/" .$row["codi"]. ".jpg'></a>" ?>
+	<?php
 	$conn->close();
 ?>
 
