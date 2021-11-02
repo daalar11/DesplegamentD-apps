@@ -11,13 +11,13 @@
 <?php include('header.php'); ?>
 
 <?php
-
+session_start();
 $codi=$_GET['codi'];
 include('config-db.php');
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
-session_start();
+
 $_SESSION['carreto']=array();
 $carretoCodi=$_GET['codi'];
 $carretoPreu=$_GET['preu'];
