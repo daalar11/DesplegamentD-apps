@@ -20,7 +20,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 session_start();
 $_SESSION['carreto']=array();
 $carretoCodi=$_GET['codi'];
-$carretoPreu=$_GET['preu']
+$carretoPreu=$_GET['preu'];
 array_push($_SESSION['carreto'],$carretoCodi);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
