@@ -52,7 +52,7 @@
 				<span lang='ca'>preu </span>
 				" .$row["preu"]."<br> 
 				<a href='carreto.php?preu=".$row["preu"]."&codi=".$row["codi"]."'><img width='300px'height='300px' src='../.imatges/" .$row["codi"]. ".jpg'></a>
-			</p>"
+			</p>";
 
 	}else{
 		echo "0 results";
