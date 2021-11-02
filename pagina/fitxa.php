@@ -10,6 +10,22 @@
 <body>
 
 <?php
+	$idiomaActual = 'es'; 
+	// Si se ha seleccionado un idioma se guarda 
+	// una cookie con el idioma 
+	if(isset($_GET['idioma'])){ 
+	  setcookie ("idioma", $_GET['idioma'], time () + 7*24*60*60); 
+	  $idiomaActual = $_GET['idioma']; 
+	} 
+	elseif(isset($_COOKIE['idioma'])){ 
+	// Miri que exista el archivo del idioma 
+	  if(file_exists("lang/".$_COOKIE['idioma'].".php")){ 
+		$idiomaActual = $_COOKIE['idioma']; 
+	  } 
+	} //incluye la carpeta (lang) donde estan los file php en y es etc.
+	include($_SERVER['DOCUMENT_ROOT']."/lang/".$idiomaActual.".php"); 
+
+	
 	$codi=$_GET['codi'];
 	include('config-db.php');
 	$conn =new mysqli($servername, $username, $password, $dbname);
@@ -20,10 +36,13 @@
 		
 	$sql ="Select codi,nom,descripcio, preu FROM productes where codi=$codi";
 	$result = $conn-> query($sql);
-
+	echo $selcion_idioma['selecciona'];
+	?>
+		<select onChange="document.location = '<?php echo $_SERVER['PHP_SELF'];?>?idioma=' + this.value"></select>
+	<?php
 	if ($result ->num_rows >0){
 	$row = $result->fetch_assoc();
-		
+	
 		echo "<p>
 				<span lang=\"ca\">codi:</span>
 				</p>  ". $row["codi"]. " 
@@ -33,12 +52,20 @@
 				<span lang='ca'>preu </span>
 				" .$row["preu"]."<br> 
 				<a href='carreto.php?preu=".$row["preu"]."&codi=".$row["codi"]."'><img width='300px'height='300px' src='../.imatges/" .$row["codi"]. ".jpg'></a>
-			</p>";	
+			</p>"
+
 	}else{
 		echo "0 results";
 	}
 	$conn->close();
 ?>
+ <?php
+echo $selcion_idioma['selecciona'];?>  
+<select onChange="document.location = '<?php echo $_SERVER['PHP_SELF'];?>?idioma=' + this.value" /> 
+<option><?php echo $selcion_idioma['txt_idiomas'];?>  
+<option value="es" ></option> <?php echo $selcion_idioma['nombre'];?>  
+<option value="en" ></option> <?php echo $selcion_idioma['codigo'];?> 
+</select><?php echo actual;?> 
 
 </body>
 </html>
