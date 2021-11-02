@@ -21,8 +21,7 @@
 		die("Connection failed: ". $conn->connect_error);
 	}
 	?>
-	<?php
-echo $selcion_idioma['selecciona'];?>  
+
 
 	<?php
 	$sql ="Select codi,nom,descripcio, preu FROM productes where codi=$codi";
