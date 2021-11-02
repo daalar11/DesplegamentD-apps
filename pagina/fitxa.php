@@ -10,6 +10,7 @@
 <body>
 
 <?php
+	session_start();
  	$codi=$_GET['codi'];
 	include('config-db.php');
 	function obtenerIidoma(){
