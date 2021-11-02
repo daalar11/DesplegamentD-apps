@@ -33,16 +33,18 @@ if ($conn->connect_error) {
 }
 	$sql ="Select codi,nom,descripcio, preu FROM productes";
 $result = $conn-> query($sql);
-
+$preutotal=0;
 if ($result ->num_rows >0){
 	while($row = $result->fetch_assoc()){
       
 		foreach($_SESSION['carreto'] as $pip=>$value){
 			if($row["codi"]==$value){
 			echo "<img width='300px'height='300px' src='../.imatges/".$value.".jpg'> ";
+			$preutotal+=$row["preu"];
 			}
 		}
 	}
+	echo $preutotal;
 }else{
 echo "0 results";
 }
