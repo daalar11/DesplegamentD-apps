@@ -31,7 +31,7 @@ $result = $conn-> query($sql);
 
 if ($result ->num_rows >0){
 	while($row = $result->fetch_assoc()){
-        if($row["codi"]==$_SESSION['carreto']){
+        if($row["codi"]==$codi){
 
 	echo "<img width='300px'height='300px' src='../.imatges/".$codi.".jpg'> ";
         }
