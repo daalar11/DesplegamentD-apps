@@ -19,6 +19,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 session_start();
 $products=array();
+$_SESSION['carreto']=$products;
 $_SESSION['carreto']=$products.array_push($products,$codi);	
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
