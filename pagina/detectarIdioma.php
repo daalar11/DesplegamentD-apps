@@ -5,5 +5,4 @@ function obtenerIidoma(){
 }
 $idioma_usuario=obtenerIidoma();
 $_COOKIE['idioma']=$idioma_usuario;
-echo $_COOKIE['idioma'];
 ?>
