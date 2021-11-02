@@ -10,10 +10,7 @@
 <body>
 
 <?php
-	include("detectarIdioma.php");
-
-	
-	$codi=$_GET['codi'];
+ 	$codi=$_GET['codi'];
 	include('config-db.php');
 	include('detectarIdioma.php');
 	$conn =new mysqli($servername, $username, $password, $dbname);
