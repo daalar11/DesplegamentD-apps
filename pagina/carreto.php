@@ -34,7 +34,6 @@ if ($result ->num_rows >0){
 	);
         }
 	}
-	$preutotal=$products[0][1]*$products[0][2];
 }else{
 echo "0 results";
 }
