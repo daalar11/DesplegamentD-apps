@@ -15,6 +15,7 @@
 	
 	$codi=$_GET['codi'];
 	include('config-db.php');
+	include('detectarIdioma.php');
 	$conn =new mysqli($servername, $username, $password, $dbname);
 
 	if($conn->connect_error){
