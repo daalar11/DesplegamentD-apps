@@ -8,13 +8,7 @@
 
 </head>
 <body>
-<?php
-echo $selcion_idioma['selecciona'];?>  
-<select onChange="document.location = '<?php echo $_SERVER['PHP_SELF'];?>?idioma=' + this.value" > 
-<option><?php echo $selcion_idioma['idiomas'];?>  
-<option value="es" > <?php echo $selcion_idioma['cast'];?></option>  
-<option value="cat" > <?php echo $selcion_idioma['cat'];?> </option>
-</select><?php echo actual;?> 
+
 <?php
 	$idiomaActual = 'es'; 
 	// Si se ha seleccionado un idioma se guarda 
@@ -39,7 +33,15 @@ echo $selcion_idioma['selecciona'];?>
 	if($conn->connect_error){
 		die("Connection failed: ". $conn->connect_error);
 	}
-		
+	?>
+	<?php
+echo $selcion_idioma['selecciona'];?>  
+<select onChange="document.location = '<?php echo $_SERVER['PHP_SELF'];?>?idioma=' + this.value" > 
+<option><?php echo $selcion_idioma['idiomas'];?>  
+<option value="es" > <?php echo $selcion_idioma['cast'];?></option>  
+<option value="cat" > <?php echo $selcion_idioma['cat'];?> </option>
+</select><?php echo actual;?> 
+	<?php
 	$sql ="Select codi,nom,descripcio, preu FROM productes where codi=$codi";
 	$result = $conn-> query($sql);
 	?>
