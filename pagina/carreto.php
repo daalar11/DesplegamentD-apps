@@ -33,11 +33,11 @@ if ($result ->num_rows >0){
 	while($row = $result->fetch_assoc()){
         if($row["codi"]==$_SESSION['carreto']){
 
-	echo "<img width='300px'height='300px' src='../.imatges/".$codi.".jpg'> ".$products[0][0];
+	echo "<img width='300px'height='300px' src='../.imatges/".$codi.".jpg'> ";
         }
 		foreach($_SESSION['carreto'] as $codi=>$value){
 			if($row["codi"]==$value){
-			echo "<img width='300px'height='300px' src='../.imatges/".$codi.".jpg'> ".$products[0][0];
+			echo "<img width='300px'height='300px' src='../.imatges/".$codi.".jpg'> ";
 			}
 		}
 	}
