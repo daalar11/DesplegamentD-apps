@@ -62,7 +62,7 @@
  <?php
 echo $selcion_idioma['selecciona'];?>  
 <select onChange="document.location = '<?php echo $_SERVER['PHP_SELF'];?>?idioma=' + this.value" > 
-<option><?php echo $selcion_idioma['txt_idiomas'];?>  
+<option><?php echo $selcion_idioma['precio'];?>  
 <option value="es" ></option> <?php echo $selcion_idioma['nombre'];?>  
 <option value="en" ></option> <?php echo $selcion_idioma['codigo'];?> 
 </select><?php echo actual;?> 
