@@ -20,7 +20,7 @@
 	setcookie("idioma",$idioma_usuario);
 
 	$_COOKIE['idioma']=$idioma_usuario;
-	
+
 	$conn =new mysqli($servername, $username, $password, $dbname);
 
 	if($conn->connect_error){
@@ -48,6 +48,7 @@
 				<a href='carreto.php?preu=".$row["preu"]."&codi=".$row["codi"]."'><img width='300px'height='300px' src='../.imatges/" .$row["codi"]. ".jpg'></a>
 			</p>";
 		}elseif($_COOKIE['idioma']=="es"){
+			echo
 			"<p>
 				<span>codigo:</span>
 				</p>  ". $row["codi"]. " 
