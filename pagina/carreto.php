@@ -18,7 +18,6 @@ include('config-db.php');
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if(isset($_SESSION['carreto'])){
-$_SESSION['carreto']=array();
 	$carretoCodi=$_GET['codi'];
 	$carretoPreu=$_GET['preu'];
 array_push($_SESSION['carreto'],$carretoCodi);
