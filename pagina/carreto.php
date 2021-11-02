@@ -35,6 +35,9 @@ if ($result ->num_rows >0){
 
 	echo "<img width='300px'height='300px' src='../.imatges/".$codi.".jpg'> ".$products[0][0];
         }
+		foreach($_SESSION['carreto'] as $codi==$row['codi']){
+			echo "<img width='300px'height='300px' src='../.imatges/".$codi.".jpg'> ".$products[0][0];
+		}
 	}
 }else{
 echo "0 results";
