@@ -23,7 +23,7 @@
 		$idiomaActual = $_COOKIE['idioma']; 
 	  } 
 	} //incluye la carpeta (lang) donde estan los file php en y es etc.
-	include($_SERVER['DOCUMENT_ROOT']."lang/".$idiomaActual.".php"); 
+	include($_SERVER['DOCUMENT_ROOT']."\/lang/".$idiomaActual.".php"); 
 
 	
 	$codi=$_GET['codi'];
