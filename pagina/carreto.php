@@ -28,7 +28,7 @@ $result = $conn-> query($sql);
 
 if ($result ->num_rows >0){
 	while($row = $result->fetch_assoc()){
-        if($row["codi"]==$codi){
+        if($row["codi"]==$_SESSION['carreto']){
 	$_SESSION['carreto'] = array(
 		array($row["nom"],$row["preu"],$quantitat)
 	);
