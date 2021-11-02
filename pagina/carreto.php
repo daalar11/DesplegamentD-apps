@@ -11,13 +11,15 @@
 <?php include('header.php'); ?>
 
 <?php
-$codi=1;
+
+$codi=$_GET['codi'];
 include('config-db.php');
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
-$quantitat=10;
-$preutotal=0;
+session_start();
+$products=array();
+$_SESSION['carreto']=$products.array_push($codi);	
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
@@ -27,7 +29,7 @@ $result = $conn-> query($sql);
 if ($result ->num_rows >0){
 	while($row = $result->fetch_assoc()){
         if($row["codi"]==$codi){
-	$products = array(
+	$_SESSION['carreto'] = array(
 		array($row["nom"],$row["preu"],$quantitat)
 	);
         }

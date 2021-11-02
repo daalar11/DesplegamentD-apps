@@ -32,7 +32,7 @@
 				".$row["descripcio"]." 
 				<span lang='ca'>preu </span>
 				" .$row["preu"]."<br> 
-				<img width='300px'height='300px' src='../.imatges/" .$row["codi"]. ".jpg'>
+				<a href='carreto.php?codi=".$row["codi"]."'><img width='300px'height='300px' src='../.imatges/" .$row["codi"]. ".jpg'></a>
 			</p>";	
 	}else{
 		echo "0 results";
