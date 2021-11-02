@@ -8,7 +8,13 @@
 
 </head>
 <body>
-
+<?php
+echo $selcion_idioma['selecciona'];?>  
+<select onChange="document.location = '<?php echo $_SERVER['PHP_SELF'];?>?idioma=' + this.value" > 
+<option><?php echo $selcion_idioma['idiomas'];?>  
+<option value="es" > <?php echo $selcion_idioma['cast'];?></option>  
+<option value="cat" > <?php echo $selcion_idioma['cat'];?> </option>
+</select><?php echo actual;?> 
 <?php
 	$idiomaActual = 'es'; 
 	// Si se ha seleccionado un idioma se guarda 
@@ -58,13 +64,7 @@
 	}
 	$conn->close();
 ?>
- <?php
-echo $selcion_idioma['selecciona'];?>  
-<select onChange="document.location = '<?php echo $_SERVER['PHP_SELF'];?>?idioma=' + this.value" > 
-<option><?php echo $selcion_idioma['idiomas'];?>  
-<option value="es" > <?php echo $selcion_idioma['cast'];?></option>  
-<option value="cat" > <?php echo $selcion_idioma['cat'];?> </option>
-</select><?php echo actual;?> 
+
 
 </body>
 </html>
