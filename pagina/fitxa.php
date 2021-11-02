@@ -10,20 +10,7 @@
 <body>
 
 <?php
-	$idiomaActual = 'es'; 
-	// Si se ha seleccionado un idioma se guarda 
-	// una cookie con el idioma 
-	if(isset($_GET['idioma'])){ 
-	  setcookie ("idioma", $_GET['idioma'],0,2), time () + 7*24*60*60); 
-	  $lang = $_GET['idioma']; 
-	} 
-	elseif(isset($_COOKIE['idioma'])){ 
-	// Miri que exista el archivo del idioma 
-	  if(file_exists("lang/".$_COOKIE['idioma'].".php")){ 
-		$lang = $_COOKIE['idioma']; 
-	  } 
-	} //incluye la carpeta (lang) donde estan los file php en y es etc.
-	include("lang/".$lang.".php"); 
+	include("detectarIdioma.php");
 
 	
 	$codi=$_GET['codi'];
@@ -44,35 +31,34 @@ echo $selcion_idioma['selecciona'];?>
 	<?php
 	if ($result ->num_rows >0){
 	$row = $result->fetch_assoc();
-	
+		if($_COOKIE['idioma']=="ca"){
 		echo "<p>
-				<span lang=\"ca\">codi:</span>
+				<span>codi:</span>
 				</p>  ". $row["codi"]. " 
-				<p><span lang='ca'>Nom: </span> ".$row["nom"]." 
-				<span lang='ca'>Descrpicio:</span>
+				<p><span >Nom: </span> ".$row["nom"]." 
+				<span >Descrpicio:</span>
 				".$row["descripcio"]." 
-				<span lang='ca'>preu </span>
+				<span >preu </span>
 				" .$row["preu"]."<br> 
 				<a href='carreto.php?preu=".$row["preu"]."&codi=".$row["codi"]."'><img width='300px'height='300px' src='../.imatges/" .$row["codi"]. ".jpg'></a>
 			</p>";
-
+		}elseif($_COOKIE['idioma']=="es"){
+			"<p>
+				<span>codigo:</span>
+				</p>  ". $row["codi"]. " 
+				<p><span>Nombre: </span> ".$row["nom"]." 
+				<span>Descrpicion:</span>
+				".$row["descripcio"]." 
+				<span>precio </span>
+				" .$row["preu"]."<br> 
+				<a href='carreto.php?preu=".$row["preu"]."&codi=".$row["codi"]."'><img width='300px'height='300px' src='../.imatges/" .$row["codi"]. ".jpg'></a>
+			</p>";
+		}
 	}else{
 		echo "0 results";
 	}
 	?>
-	<p>
-		<?= $lang["codigo"].$row["codi"] ?><br>
-	</p>
-	<p>
-		<?= $lang["nombre"].$row["nom"] ?><br>
-	</p>
-	<p>
-		<?= $lang["descripcion"].$row["descripcio"] ?><br>
-	</p>
-	<p>
-		<?= $lang["precio"].$row["preu"] ?><br>
-	</p>
-	<?= "<a href='carreto.php?preu=".$row["preu"]."&codi=".$row["codi"]."'><img width='300px'height='300px' src='../.imatges/" .$row["codi"]. ".jpg'></a>" ?>
+
 	<?php
 	$conn->close();
 ?>
