@@ -35,8 +35,10 @@ if ($result ->num_rows >0){
 
 	echo "<img width='300px'height='300px' src='../.imatges/".$codi.".jpg'> ".$products[0][0];
         }
-		foreach($_SESSION['carreto'] as $codi==$row['codi']){
+		foreach($_SESSION['carreto'] as $codi=>$value){
+			if($row["codi"]==$codi){
 			echo "<img width='300px'height='300px' src='../.imatges/".$codi.".jpg'> ".$products[0][0];
+			}
 		}
 	}
 }else{
