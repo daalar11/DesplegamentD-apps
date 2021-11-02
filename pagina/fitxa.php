@@ -17,6 +17,7 @@
 		return $idioma;
 	}
 	$idioma_usuario=obtenerIidoma();
+	setcookie('idioma',$valor);
 	$_COOKIE['idioma']=$idioma_usuario;
 	$conn =new mysqli($servername, $username, $password, $dbname);
 
