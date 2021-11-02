@@ -18,9 +18,10 @@ include('config-db.php');
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 session_start();
-$products=array();
-$_SESSION['carreto']=$products;
-$_SESSION['carreto']=$products.array_push($products,$codi);	
+$_SESSION['carreto']=array();
+$carretoCodi=$_GET['codi'];
+$carretoPreu=$_GET['preu']
+array_push($_SESSION['carreto'],$carretoCodi);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
@@ -30,15 +31,14 @@ $result = $conn-> query($sql);
 if ($result ->num_rows >0){
 	while($row = $result->fetch_assoc()){
         if($row["codi"]==$_SESSION['carreto']){
-	$_SESSION['carreto'] = array(
-		array($row["nom"],$row["preu"],$quantitat)
-	);
+
+	echo "<img width='300px'height='300px' src='../.imatges/".$codi.".jpg'> ".$products[0][0];
         }
 	}
 }else{
 echo "0 results";
 }
-	echo "<img width='300px'height='300px' src='../.imatges/".$codi.".jpg'> ".$products[0][0];
+	
 
 $conn->close();
 ?>
