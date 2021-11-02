@@ -5,6 +5,9 @@ $selcion_idioma=array(
 'descripcion'=>'descripcio',
 'precio'=>'preu',
 'selecciona'=>'selecciona',
+'cast'=>'castellano',
+'cat'=>'catala',
+'idiomas'=>'idioma',
 );
 DEFINE('actual',' Idioma Actual: Cat');
 $mas_op= '????? CAT';
