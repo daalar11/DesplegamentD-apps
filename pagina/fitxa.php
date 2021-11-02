@@ -12,7 +12,12 @@
 <?php
  	$codi=$_GET['codi'];
 	include('config-db.php');
-	include('detectarIdioma.php');
+	function obtenerIidoma(){
+		$idioma= substr($_SERVER["HTTP_ACCEPT_LANGUAGE"],0,2);
+		return $idioma;
+	}
+	$idioma_usuario=obtenerIidoma();
+	$_COOKIE['idioma']=$idioma_usuario;
 	$conn =new mysqli($servername, $username, $password, $dbname);
 
 	if($conn->connect_error){
