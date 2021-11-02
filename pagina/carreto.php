@@ -19,11 +19,13 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if(isset($_SESSION['carreto'])){
 $_SESSION['carreto']=array();
-$carretoCodi=$_GET['codi'];
-$carretoPreu=$_GET['preu'];
+	$carretoCodi=$_GET['codi'];
+	$carretoPreu=$_GET['preu'];
 array_push($_SESSION['carreto'],$carretoCodi);
 }else{
 	$_SESSION['carreto']=array();
+	$carretoCodi=$_GET['codi'];
+	$carretoPreu=$_GET['preu'];
 }
 var_dump($_SESSION['carreto']);
 if ($conn->connect_error) {
