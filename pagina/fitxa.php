@@ -23,7 +23,7 @@
 		$lang = $_COOKIE['idioma']; 
 	  } 
 	} //incluye la carpeta (lang) donde estan los file php en y es etc.
-	include("lang/".$lang".php"); 
+	include("lang/".$lang.".php"); 
 
 	
 	$codi=$_GET['codi'];
