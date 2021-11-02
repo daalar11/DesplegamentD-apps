@@ -50,10 +50,6 @@ echo "0 results";
 $conn->close();
 ?>
 	<form action="destroy.php" method="post">  
-        Codi:       <input type="text" name="codi">
-        Nom:        <input type="text" name="nom">
-        Descripcio: <input type="text" name="desc">
-        Preu:       <input type="text"name="preu">
         <input type="submit" value="comprar"/>
     </form>
 	</body>
