@@ -25,6 +25,7 @@ array_push($_SESSION['carreto'],$carretoCodi);
 	$_SESSION['carreto']=array();
 	$carretoCodi=$_GET['codi'];
 	$carretoPreu=$_GET['preu'];
+	array_push($_SESSION['carreto'],$carretoCodi);
 }
 var_dump($_SESSION['carreto']);
 if ($conn->connect_error) {
