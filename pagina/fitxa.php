@@ -36,7 +36,7 @@
 	?>
 	<?php
 echo $selcion_idioma['selecciona'];?>  
-<select onChange="document.location = '<?php echo $_SERVER['PHP_SELF'];?>?idioma=' + this.value" > 
+<select onChange="lang/ = '<?php echo $_SERVER['PHP_SELF'];?>?idioma=' + this.value" > 
 <option><?php echo $selcion_idioma['idiomas'];?>  
 <option value="es" > <?php echo $selcion_idioma['cast'];?></option>  
 <option value="cat" > <?php echo $selcion_idioma['cat'];?> </option>
@@ -45,7 +45,6 @@ echo $selcion_idioma['selecciona'];?>
 	$sql ="Select codi,nom,descripcio, preu FROM productes where codi=$codi";
 	$result = $conn-> query($sql);
 	?>
-		<select onChange="document.location = '<?php echo $_SERVER['PHP_SELF'];?>?idioma=' + this.value"></select>
 	<?php
 	if ($result ->num_rows >0){
 	$row = $result->fetch_assoc();
