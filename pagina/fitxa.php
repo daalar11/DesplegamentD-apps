@@ -13,9 +13,7 @@
 	session_start();
  	$codi=$_GET['codi'];
 	include('config-db.php');
-	isset($_COOKIE['idioma']){
-		var_dump($_COOKIE['idioma']);
-	}else{
+	if(!isset($_COOKIE['idioma'])){
 		function obtenerIidoma(){
 			$idioma= substr($_SERVER["HTTP_ACCEPT_LANGUAGE"],0,2);
 			return $idioma;
