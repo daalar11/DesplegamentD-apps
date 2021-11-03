@@ -38,7 +38,7 @@
 	if ($result ->num_rows >0){
 	$row = $result->fetch_assoc();
 		if($_COOKIE['idioma']=="ca"){
-		echo "<a href='canviaridioma.php?codi=$codi'>Cambiar a castellano</a>
+		echo "<a href='canviaridioma2.php?codi=$codi'>Cambiar a castellano</a>
 		<p>
 				<span>codi:</span>
 				</p>  ". $row["codi"]. " 
