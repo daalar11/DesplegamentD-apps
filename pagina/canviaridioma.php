@@ -3,7 +3,8 @@ $codi=$_GET['codi'];
 if($_COOKIE['idioma']=="ca"){
     $_COOKIE['idioma']="es";
     header("refresh:1;url=fitxa.php?codi=$codi")
-}elseif($_COOKIE['idioma']=="es"){
+}
+if($_COOKIE['idioma']=="es"){
     $_COOKIE['idioma']="ca";
     header("refresh:1;url=fitxa.php?codi=$codi")
 }
