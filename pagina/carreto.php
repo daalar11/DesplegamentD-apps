@@ -39,7 +39,7 @@ if ($result ->num_rows >0){
       
 		foreach($_SESSION['carreto'] as $pip=>$value){
 			if($row["codi"]==$value){
-			echo "<img width='300px'height='300px' src='../.imatges/".$value.".jpg'> ";
+			echo "<div><img width='300px'height='300px' src='../.imatges/".$value.".jpg'>". $row['nom']." </div><hr>";
 			$preutotal+=$row["preu"];
 			}
 		}
