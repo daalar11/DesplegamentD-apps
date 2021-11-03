@@ -1,7 +1,7 @@
 <?php
 $usuariUs=$_POST['usuari'];
 $contrasenaUs=$_POST['contrasena'];
-echo "$usuariUs . $contrasenaUs";
+
 
 
     if($usuariUs=="administrador"&&'1234'==$contrasenaUs){

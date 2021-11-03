@@ -44,7 +44,7 @@ if ($result ->num_rows >0){
 			}
 		}
 	}
-	echo "Preu total:"+$preutotal;
+	echo "Preu total:".$preutotal."euros";
 }else{
 echo "0 results";
 }
