@@ -19,6 +19,9 @@
 			return $idioma;
 		}
 		$idioma_usuario=obtenerIidoma();
+		if($idioma_usuario !="es" and $lang !="ca"){
+			$idioma_usuario="ca";
+		}
 		setcookie("idioma",$idioma_usuario);
 	
 		$_COOKIE['idioma']=$idioma_usuario;
