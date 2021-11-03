@@ -13,14 +13,19 @@
 	session_start();
  	$codi=$_GET['codi'];
 	include('config-db.php');
-	function obtenerIidoma(){
-		$idioma= substr($_SERVER["HTTP_ACCEPT_LANGUAGE"],0,2);
-		return $idioma;
+	isset($_COOKIE['idioma']){
+		var_dump($_COOKIE['idioma']);
+	}else{
+		function obtenerIidoma(){
+			$idioma= substr($_SERVER["HTTP_ACCEPT_LANGUAGE"],0,2);
+			return $idioma;
+		}
+		$idioma_usuario=obtenerIidoma();
+		setcookie("idioma",$idioma_usuario);
+	
+		$_COOKIE['idioma']=$idioma_usuario;
 	}
-	$idioma_usuario=obtenerIidoma();
-	setcookie("idioma",$idioma_usuario);
 
-	$_COOKIE['idioma']=$idioma_usuario;
 
 	$conn =new mysqli($servername, $username, $password, $dbname);
 
