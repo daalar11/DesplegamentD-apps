@@ -19,7 +19,7 @@
     body {     
             display: grid;
             background-color: red;
-            grid-template-rows: [row1]50px;
+            grid-template-rows: [row1]50px[row2]400px[row3]300px[row4]800px[row5]400px[row6]200px[row7] ;
     }
   }
 
