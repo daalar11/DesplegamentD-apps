@@ -24,10 +24,14 @@
     header{
       grid-row-start: row1;
       grid-row-end: row2;
+      width: 100%;
+      background-color: brown;
     }
     footer{
       grid-row-start:row6;
       grid-row-end: row7;
+      width: 100%;
+      background-color: blue;
     }
   }
 
