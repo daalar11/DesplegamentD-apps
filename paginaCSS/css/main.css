@@ -50,12 +50,14 @@
       grid-row-end: row2;
       width: 100%;
       background-color: yellow;
+      height: 100%;
     }
     footer{
       grid-row-start:row6;
       grid-row-end: row7;
       width: 100%;
       background-color: blue;
+      height: 100%;
     }
   }
 
