@@ -21,5 +21,13 @@
             background-color: red;
             grid-template-rows: [row1]50px[row2]400px[row3]300px[row4]800px[row5]400px[row6]200px[row7] ;
     }
+    header{
+      grid-row-start: row1;
+      grid-row-end: row2;
+    }
+    footer{
+      grid-row-start:row6;
+      grid-row-end: row7;
+    }
   }
 
