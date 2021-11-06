@@ -11,40 +11,20 @@
     }
   }
   @media only screen and (min-width: 600px) {
+    /*Per ordinador*/
+    /*Reset general*/
     *{
         margin:0;
         padding:0;
         box-sizing: border-box;
     }
+    /*Creacio del grid*/
     body {     
             display: grid;
             
             grid-template-rows: [row1]50px[row2]400px[row3]300px[row4]800px[row5]400px[row6]200px[row7] ;
     }
-    #s1{
-      grid-row-start: row2;
-      grid-row-end: row3;
-      width: 100%;
-      height: 100%;
-    }
-    #s2{
-      grid-row-start: row3;
-      grid-row-end: row4;
-      width: 100%;
-      height: 100%;
-    }
-    #s3{
-      grid-row-start: row4;
-      grid-row-end: row5;
-      width: 100%;
-      height: 100%;
-    }
-    #s4{
-      grid-row-start: row5;
-      grid-row-end: row6;
-      width: 100%;
-      height: 100%;
-    }
+    /*Colocacio del header*/
     header{
       grid-row-start: row1;
       grid-row-end: row2;
@@ -52,6 +32,82 @@
       background-color: yellow;
       height: 100%;
     }
+    nav{
+      width: 100%;
+      height: 100%;
+    }
+    ul {
+      list-style-type: none;
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    #logo{
+      width: 50px;
+      height: 50px;
+    }
+    li>ul>img{
+      height: 30px;
+      width: 30px;
+    }
+    li:nth-child(2){
+      flex-grow: 2;
+    }
+    li:nth-child(1){
+      flex-grow: 1;
+    }
+    li:nth-child(3){
+      flex-grow: 1;
+      order:3;
+    }
+    li>ul{
+      justify-content: flex-end;
+    }
+    li>ul#center{
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+    }
+    /*Coloacio de les rows y flex de les section */
+    /*Primer section*/
+    section:nth-child(1){
+      display:flex;
+      grid-row-start: row2;
+      grid-row-end: row3;
+      width: 100%;
+      height: 100%;
+    }
+    #imgdestacat1{
+      width: 100%;
+      height:100%;
+    }
+    section:nth-child(1)>div{
+
+    height: 100%;
+    width: 50%;
+    }
+    /*Segon section*/
+    section:nth-child(2){
+      grid-row-start: row3;
+      grid-row-end: row4;
+      width: 100%;
+      height: 100%;
+    }
+       /*Tercer section*/
+    section:nth-child(3){
+      grid-row-start: row4;
+      grid-row-end: row5;
+      width: 100%;
+      height: 100%;
+    }
+       /*Quart section*/
+    section:nth-child(4){
+      grid-row-start: row5;
+      grid-row-end: row6;
+      width: 100%;
+      height: 100%;
+    }
+    /*Footer */
     footer{
       grid-row-start:row6;
       grid-row-end: row7;
@@ -59,5 +115,7 @@
       background-color: blue;
       height: 100%;
     }
+
+
   }
 
