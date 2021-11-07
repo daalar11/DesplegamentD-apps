@@ -68,44 +68,71 @@
       justify-content: space-around;
       flex-direction: row;
     }
-    /*Coloacio de les rows y flex de les section */
-    /*Primer section*/
-    section:nth-child(1){
+    #s1{
       display:flex;
       grid-row-start: row2;
       grid-row-end: row3;
       width: 100%;
       height: 100%;
+      background-color: blue;
     }
+    /*Primer section*/
+    
     #imgdestacat1{
       width: 100%;
       height:100%;
     }
-    section:nth-child(1)>div{
-
+    #s1>div{
     height: 100%;
     width: 50%;
     }
     /*Segon section*/
-    section:nth-child(2){
+      #s2{
       grid-row-start: row3;
       grid-row-end: row4;
       width: 100%;
       height: 100%;
+      background-image: url("/img/2AGF1B7.jpg");
+      z-index: 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+    #s2>div{
+      
+      z-index: 3;
     }
        /*Tercer section*/
-    section:nth-child(3){
+    #s3{
       grid-row-start: row4;
       grid-row-end: row5;
       width: 100%;
       height: 100%;
+      background-color: green;
+      display: flex;
+      flex-wrap: wrap;
     }
+    #s3>div{
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      height: 100%;
+      width: 100%;
+    }
+    #s3>div>div{
+
+    
+      padding:3%;
+      width: 25%;
+      height: 40%;
+    }
+
        /*Quart section*/
-    section:nth-child(4){
+    #s4{
       grid-row-start: row5;
       grid-row-end: row6;
       width: 100%;
       height: 100%;
+      background-color: red;
     }
     /*Footer */
     footer{
@@ -115,6 +142,10 @@
       background-color: blue;
       height: 100%;
     }
+    
+    /*Coloacio de les rows y flex de les section */
+    
+    
 
 
   }
