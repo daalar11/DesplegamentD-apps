@@ -10,6 +10,9 @@
             background-color: aliceblue;
     }
   }
+
+
+  
   @media only screen and (min-width: 600px) {
     /*Per ordinador*/
     /*Reset general*/
@@ -121,7 +124,7 @@
     #s3>div>div{
 
     
-      padding:3%;
+      padding:1%;
       width: 25%;
       height: 40%;
     }
