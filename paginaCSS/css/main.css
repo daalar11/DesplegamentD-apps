@@ -25,7 +25,7 @@
     body {     
             display: grid;
             
-            grid-template-rows: [row1]50px[row2]400px[row3]300px[row4]800px[row5]400px[row6]200px[row7] ;
+            grid-template-rows: [row1]50px[row2]400px[row3]300px[row4]800px[row5]auto[row6]200px[row7] ;
     }
     /*Colocacio del header*/
     header{
@@ -134,9 +134,25 @@
       grid-row-start: row5;
       grid-row-end: row6;
       width: 100%;
-      height: 100%;
-      background-color: red;
+      height: auto;
+      display: flex;
+      flex: wrap;
+      flex-direction: column;
     }
+    #d1{
+      width: 100%;
+      height: auto;
+    }
+    #d2{
+      display: flex;
+      flex-wrap: wrap;
+      height: auto;
+      width: 100%;
+    }
+    #d2 div{
+      width: 25%;
+    }
+    
     /*Footer */
     footer{
       grid-row-start:row6;
