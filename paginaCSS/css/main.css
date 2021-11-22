@@ -25,7 +25,7 @@
     body {     
             display: grid;
             
-            grid-template-rows: [row1]50px[row2]400px[row3]300px[row4]800px[row5]auto[row6]200px[row7] ;
+            grid-template-rows: [row1]50px[row2]400px[row3]300px[row4]auto[row5]auto[row6]200px[row7] ;
     }
     /*Colocacio del header*/
     header{
@@ -118,15 +118,16 @@
       display: flex;
       flex-wrap: wrap;
       align-content: center;
-      height: 100%;
+      height: auto;
       width: 100%;
+      justify-content: center;
+    }
+    #s3>div>h1{
+      padding: 20px;
     }
     #s3>div>div{
-
-    
-      padding:1%;
+      height: 400px;
       width: 25%;
-      height: 40%;
     }
 
        /*Quart section*/
@@ -142,6 +143,14 @@
     #d1{
       width: 100%;
       height: auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    #d1>div{
+      height: auto;
+      width: 100%;
+      padding-left: 44%;
+      padding-right: 43%;
     }
     #d2{
       display: flex;
