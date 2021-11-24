@@ -5,54 +5,113 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<link rel="stylesheet" href="css/main.css">
 
 </head>
 <body>
 	<header>
+		<nav>
+			<ul>
+				<li><img id="logo"></li>
+				<li><ul id="center"><a>Shop</a><a>Company</a><a>Blog</a><a>Surfboard</a><a>Support</a><a>Contact</a></ul></li>
+				<li><ul><img class="icono"><img class="icono"><img class="icono"></ul></li>
+			</ul>
+		</nav>
 	</header>
-	<main>
+	
 		<section id="s1">
-			a
+			<div><h1>Titol</h1><h4>subtitol</h4><p>Texte generic</p><button>Boto</button></div>
+			<div><span>TITOL</span> <span>CENTRAR</span> <span>GENERAL</span></div>
+			<div></div>
 		</section>
 		<section id="s2">
-			a
+			<div>
+				<h1>Stand Up Paddle Board</h1>
+				 <h4>From $399</h4>
+				 <p>Texto generico por que no se que hay que poner
+				 </p>
+			</div>
 		</section>
 		<section id="s3">
-			a
+				<div><h1>New products</h1></div>
+		<div>
+			<div>
+				<div class="foto_item">ESTO TENDRA LA FOTO</div>
+				<div></div>
+			</div>
+			<div>
+				<div class="foto_item">ESTO TENDRA LA FOTO</div>
+				<div>
+					<div><h4>marca</h4><h3>Nom del producte</h3><span>ESTRELLAS</span><p>PREU</p><span>COLORS</span></div>
+					<div></div>
+				</div>
+			</div>
+			<div>
+				<div class="foto_item">ESTO TENDRA LA FOTO</div>
+				<div>
+					<div><h4>marca</h4><h3>Nom del producte</h3><span>ESTRELLAS</span><p>PREU</p><span>COLORS</span></div>
+					<div></div>
+				</div>
+			</div>
+			<div>
+				<div class="foto_item">ESTO TENDRA LA FOTO</div>
+				<div>
+					<div><h4>marca</h4><h3>Nom del producte</h3><span>ESTRELLAS</span><p>PREU</p><span>COLORS</span></div>
+					<div></div>
+				</div>
+			</div>
+			<div>
+				<div class="foto_item">ESTO TENDRA LA FOTO</div>
+				<div>
+					<div><h4>marca</h4><h3>Nom del producte</h3><span>ESTRELLAS</span><p>PREU</p><span>COLORS</span></div>
+					<div></div>
+				</div>
+			</div>
+			<div>
+				<div class="foto_item">ESTO TENDRA LA FOTO</div>
+				<div>
+					<div><h4>marca</h4><h3>Nom del producte</h3><span>ESTRELLAS</span><p>PREU</p><span>COLORS</span></div>
+					<div></div>
+				</div>
+			</div>
+			<div>
+				<div class="foto_item">ESTO TENDRA LA FOTO</div>
+				<div>
+					<div><h4>marca</h4><h3>Nom del producte</h3><span>ESTRELLAS</span><p>PREU</p><span>COLORS</span></div>
+					<div></div>
+				</div>
+			</div>
+			<div>
+				<div class="foto_item">ESTO TENDRA LA FOTO</div>
+				<div>
+					<div><h4>marca</h4><h3>Nom del producte</h3><span>ESTRELLAS</span><p>PREU</p><span>COLORS</span></div>
+					<div></div>
+				</div>
+			</div>
+		</div>
 		</section>
 		<section id="s4">
-			a
+			<div id="d1">
+				<div>
+				<h4>What our customers say</h4>
+				</div>
+				<div>
+					<p>Cosa para testings</p>
+				</div>
+			</div>
+			<div id="d2">
+				
+				<div>a</div>
+				<div>a</div>
+				<div>a</div>
+				<div>a</div>
+				
+			</div>
 		</section>
-	</main>
+	
 	<footer>
 		
 	</footer>
-<!-- <?php
-include('config-db.php');
-$conn =new mysqli($servername, $username, $password, $dbname);
-if($conn->connect_error){
-	die("Connection failed: ". $conn->connect_error);
-}
-include('header.php');
-$sql ="Select codi,nom,descripcio, preu FROM productes";
-$result = $conn-> query($sql);
 
-?>
-<table>
-
-</table>
-<?php
-if ($result ->num_rows >0){
-	while($row = $result->fetch_assoc()){
-	echo "<tr> <td>codi: ". $row["codi"]. "</td><td> ".$row["nom"]."</td><td> ".$row["descripcio"]." </td><td>" .$row["preu"]." </td><td><a href='fitxa.php?codi=".$row["codi"]."'><img width='300px' height'300px' src='../.imatges/" .$row["codi"]. ".jpg'></a></td> <tr>";
-	}
-}else{
-echo "0 results";
-}
-$conn->close();
-?>
--->
 </body>
 </html>
