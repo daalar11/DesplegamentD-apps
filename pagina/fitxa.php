@@ -62,9 +62,9 @@
 			<p>
 				<span>codigo:</span>
 				</p>  ". $row["codi"]. " 
-				<p><span>Nombre: </span> ".$row["nom"]." 
+				<p><span>Nombre: </span> ".$row["nom_es"]." 
 				<span>Descrpicion:</span>
-				".$row["descripcio"]." 
+				".$row["descripcio_es"]." 
 				<span>precio </span>
 				" .$row["preu"]."<br> 
 				<a href='carreto.php?preu=".$row["preu"]."&codi=".$row["codi"]."'><img width='300px'height='300px' src='../.imatges/" .$row["codi"]. ".jpg'></a>
