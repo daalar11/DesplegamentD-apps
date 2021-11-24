@@ -12,7 +12,7 @@
 <?php
 	session_start();
  	$codi=$_GET['codi'];
-	include('config-db.php');
+	include('./utilitats/config-db.php');
 	if(!isset($_COOKIE['idioma'])){
 		function obtenerIidoma(){
 			$idioma= substr($_SERVER["HTTP_ACCEPT_LANGUAGE"],0,2);
@@ -33,12 +33,12 @@
 	if($conn->connect_error){
 		die("Connection failed: ". $conn->connect_error);
 	}
-	include('header.php');
+	include('./utilitats/header.php');
 	?>
 
 
 	<?php
-	$sql ="Select codi,nom,descripcio, preu FROM productes where codi=$codi";
+	$sql ="Select codi,nom,descripcio,preu,nom_es,descripcio_es FROM productes where codi=$codi";
 	$result = $conn-> query($sql);
 	?>
 	<?php
