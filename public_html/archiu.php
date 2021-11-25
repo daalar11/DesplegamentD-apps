@@ -1,25 +1,13 @@
 <?php
 session_start();
-include('config-db.php');
+include('./utilitats/config-db.php');
 $conn =new mysqli($servername, $username, $password, $dbname);
 if($conn->connect_error){
 	die("Connection failed: ". $conn->connect_error);
 }
-include('header.php');
+include('./utilitats/header.php');
 $sql ="Select codi,nom,descripcio, preu FROM productes";
 $result = $conn-> query($sql);
-
+include("./vistas/llistavista.php");
 ?>
-<table>
 
-</table>
-<?php
-if ($result ->num_rows >0){
-	while($row = $result->fetch_assoc()){
-	echo "<tr> <td>codi: ". $row["codi"]. "</td><td> ".$row["nom"]."</td><td> ".$row["descripcio"]." </td><td>" .$row["preu"]." </td><td><a href='fitxa.php?codi=".$row["codi"]."'><img width='300px' height'300px' src='../.imatges/" .$row["codi"]. ".jpg'></a></td> <tr>";
-	}
-}else{
-echo "0 results";
-}
-$conn->close();
-?>
