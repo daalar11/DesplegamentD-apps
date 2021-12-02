@@ -1,0 +1,38 @@
+<?php
+// define variables and set to empty values
+$codi;
+$nom;
+$descripcio;
+$preu;
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if
+    $codi = test_input($_POST["codi"]);
+  }
+
+  if (empty($_POST["nom"])) {
+    $nom = test_input($_POST["nom"]);
+  }
+
+  if (empty($_POST["desc"])) {
+    $descripcio = test_input($_POST["desc"]);
+  }
+
+  if (empty($_POST["preu"])) {
+    $preu = test_input($_POST["preu"]);
+  }
+  $servername ="localhost";
+$username ="admin";
+$password="admin";
+$dbname="myDB";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+$sql ="insert into productes(codi,nom,desc,preu) values ('$codi','$nom','$descripcio',$preu);";
+$result = $conn-> query($sql);
+}
+?>
